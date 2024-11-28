@@ -41,6 +41,8 @@ ul li {
 /* || styling caller list - side menu*/
 .caller-list-heading {
 	margin: 1rem 1.5rem;
+	font-size: 30px;
+	color: rgb(18, 91, 151);
 }
 .caller-list-wrapper {
 	flex-basis: 30rem;
@@ -56,8 +58,9 @@ ul li {
 	background: #eee;
 	margin: .5rem;
 	border-radius: 5px;
-	cursor: pointer;
-	font-size: 1.6rem;
+	/* cursor: pointer; */
+	font-size: 2rem;
+	font-weight: bold;
 }
 .call-btn {
 	border: none;
@@ -87,6 +90,7 @@ ul li {
 	max-height: 50rem;
 	background: black;
 	overflow: hidden;
+	border-radius: 10px;
 }
 
 .local-video video,
@@ -116,25 +120,30 @@ ul li {
 
 .username-input {
 	margin: 2rem 0;
+	
 }
 .username-input input {
 	width: 30rem;
-	height: 4rem;
+	height: 5rem;
 	padding: 5px;
 	outline: none;
 	border: none;
 	box-shadow: inset 0 0 15px 15px rgba(0, 0, 0, 0.2);
 	font-family: 'Lora', sans-serif;
 	font-weight: 500;
+	border-radius: 10px 0 0 10px;
+	font-size: 15px;
+	
+	
 }
 .username-input input::placeholder {
 	font-family: "Lora", serif;
 }
 .username-input button {
-	height: 4rem;
+	height: 5rem;
 	outline: none;
 	border: none;
-	background: darkgreen;
+	background: rgb(11, 94, 153);
 	color: white;
 	padding: 0 1rem;
 	font-family: "Lora", serif;
@@ -142,4 +151,94 @@ ul li {
 	letter-spacing: 1px;
 	cursor: pointer;
 	text-transform: uppercase;
+	border-radius: 0 10px 10px 0;
+	font-size: 15px;
+}
+
+
+
+/**********************/
+
+
+/* Base styles remain the same */
+
+/* Responsive Design for Tablets and Mobile */
+@media (max-width: 1024px) { /* Tablet screens */
+    .main-container {
+        flex-direction: column;
+    }
+
+    .caller-list-wrapper {
+        flex-basis: 100%;
+        border-right: none;
+        border-bottom: 1px solid black;
+    }
+
+    .video-call-container {
+        flex: 1;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .video-streams {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .local-video,
+    .remote-video {
+        width: 100%;
+        min-height: 30rem;
+        max-height: 35rem;
+    }
+
+    .username-input input {
+        width: 70%;
+    }
+
+    .username-input button {
+        width: 30%;
+    }
+}
+
+@media (max-width: 768px) { /* Mobile screens */
+    .caller-list-wrapper {
+        /* display: none; Hide the contacts sidebar on smaller screens */
+		flex-basis: 100%;
+        border-right: none;
+        border-bottom: 1px solid black;
+    }
+
+    .main-container {
+        padding: 1rem;
+    }
+
+    .video-call-container {
+        width: 100%;
+    }
+
+    .video-streams {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .local-video,
+    .remote-video {
+        min-height: 20rem;
+        max-height: 25rem;
+    }
+
+    .username-input input {
+        width: 65%;
+    }
+
+    .username-input button {
+        width: 35%;
+    }
+
+    .call {
+        width: 4rem;
+        height: 4rem;
+        margin: 1.5rem 0;
+    }
 }
