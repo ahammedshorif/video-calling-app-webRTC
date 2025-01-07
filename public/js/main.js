@@ -8,6 +8,7 @@ const socket = io();
 let localStream;
 let caller = [];
 
+
 // Single Method for peer connection
 const PeerConnection = (function(){
     let peerConnection;
